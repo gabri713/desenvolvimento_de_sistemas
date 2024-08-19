@@ -1,22 +1,40 @@
 // Hamburger menu selections
+const hamburger = document.querySelector("#hamburger");
+const navMenu = document.querySelector("ul");
 
 // scroll-to-top selection
+const scrollUp = document.querySelector("#scroll-up");
+
 
 // Hamburger menu functionality
 
+function toggleMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
 // Theme switcher selection
+const checkbox = document.querySelector("#checkbox");
+
 
 // Close menu on nav menu clicks
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+const navLinks = document.querySelectorAll("#nav-link");
+navLinks.forEach(link => link.addEventListener("click", closeMenu));
+
 
 // scroll to top functionality
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+
+
 
 // Theme switcher functionality
-const scrollUp = document.querySelector("#scroll-up");
-
-scrollUp.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
 });

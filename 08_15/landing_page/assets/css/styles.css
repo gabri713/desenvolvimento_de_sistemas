@@ -89,6 +89,8 @@ ul {
   font-weight: var(--bold-font);
 }
 
+/* Hero section starts */
+
 .hero{
   display: flex;
   align-items: center;
@@ -173,6 +175,9 @@ iframe {
   top: -105px;
   left: 255px;
 }
+/* Hero section ends */
+
+/* About section start*/
 
 .about {
   position: relative;
@@ -203,6 +208,9 @@ iframe {
   text-shadow: 2px 2px 2px #333;
   font-size: 1.8rem;
 }
+/* About section ends */
+
+/* Image gallery starts */
 
 .stars-gallery {
   display: grid;
@@ -224,6 +232,9 @@ iframe {
   grid-column: 3/5;
 }
 
+/* Image gallery ends */
+
+/* Stakeholders start */
 .people {
   margin-top: 2rem;
   padding: 1rem 0;
@@ -255,6 +266,14 @@ iframe {
   text-align: center;
   font-size: 0.8rem;
 }
+
+/* Stakeholders ends */
+
+/* Scroll to top button starts */
+
+/* Scroll to top button ends */
+
+/* Subscription form starts */
 
 .sub {
   margin-top: 2rem;
@@ -294,6 +313,9 @@ form {
   background-color: #095cf7;
 }
 
+/* Subscription form ends */
+
+/* Social icons */
 .social {
   text-align: center;
   margin: 2rem;
@@ -302,6 +324,7 @@ form {
 .socicons {
   font-size: 1.3rem;
 }
+/* Footer */
 
 footer {
   border-top: 1px solid #f1f1f1;
@@ -322,43 +345,195 @@ footer {
   height: 3rem;
 }
 
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
 
-/* Dark theme starts*/
+.label {
+  width: 50px;
+  height: 29px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 6px;
+  position: relative;
+}
 
-/* Dark theme ends */
+.switcher {
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
 
-/* Navbar starts */
+.moon {
+  color: #ffa502;
+}
 
-/* Dark theme */
+.sun {
+  color: #ff4757;
+}
 
-/* Dark theme ends */
-/* Navbar ends */
+.checkbox:checked + .label .switcher {
+  transform: translateX(24px);
+}
 
-/* Hero section starts */
+body.dark {
+  background-color: #1e272e;
+}
 
-/* Hero section ends */
+body.dark .bar {
+  background-color: #fff;
+}
 
-/* About section start*/
+body.dark p {
+  color: #fff;
+}
 
-/* About section ends */
+body.dark h3 {
+  color: #fff;
+}
 
-/* Image gallery starts */
+body.dark nav {
+  background-color: #1e272e;
+  box-shadow: 2px 3px 2px #111010;
+}
 
-/* Image gallery ends */
+body.dark ul {
+  background-color: #1e272e;
+}
 
-/* Stakeholders start */
-/* Stakeholders ends */
+body.dark .name {
+  color: var(--primary-color);
+}
 
-/* Scroll to top button starts */
+body.dark .role {
+  color: var(--secondary-color);
+}
 
-/* Scroll to top button ends */
-
-/* Subscription form starts */
-
-/* Subscription form ends */
-
-/* Social icons */
-
-/* Footer */
+body.dark footer {
+  color: #fff;
+  border-top: 1px solid #111010;
+  box-shadow: 0px -2px 3px #111010;
+}
 
 /* Media Query */
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  ul {
+    background-color: #fff;
+    flex-direction: column;
+    position: fixed;
+    left: 100%;
+    top: 5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul.active {
+    left: 0;
+}
+
+.nav-item {
+  margin: 2rem 0;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.hero {
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.intro-text h1 {
+  font-size: 2.3rem;
+}
+
+.btn {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+iframe {
+  max-width: 26rem;
+}
+
+.stand-1 {
+  left: 170px;
+}
+.stand-2 {
+  left: 225px;
+}
+
+.about {
+  text-align: center;
+}
+
+.persons {
+  grid-template-columns: repeat(1, 1fr);
+} 
+}
+
+@media screen and (max-width: 420px) {
+  .hero {
+    max-width: 330px;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  iframe {
+    max-width: 330px;
+  }
+
+  .stand-1 {
+    left: 140px;
+  }
+  .stand-2 {
+    left: 195px;
+  }
+}
+
+
+/* Desenhando barras */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+
+/* Exibindo lista */
+ul.active {
+  left: 0;
+  display: block; 
+}
+
