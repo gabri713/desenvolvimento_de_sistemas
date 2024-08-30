@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Responsivo com Validação</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Inscrição</h1>
+        <form id="registrationForm">
+            <!-- Campos de formulario vão aqui-->
+            <label for="firstName">Primeiro Nome: </label>
+            <input type="text" id="firstName" name="firstName" required>
+            <span class="error" id="firstNameError"></span>
+
+            <label for="lastName">Sobrenome: </label>
+            <input type="text" id="lastName" name="lastName" required>
+            <span class="error" id="lastNameError"></span>
+
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+
+            <label for="password">Email: </label>
+            <input type="password" id="password" name="password" required>
+            <span class="error" id="passwordError"></span>
+
+            
+
+        </form>
+    </div>
+    <script src="script.js"></script>   
+</body>
+</html>
